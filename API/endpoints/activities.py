@@ -52,7 +52,7 @@ def create_activity():
 
 @app.route("/API/activities/all", methods=["GET"])
 def get_all_activities():
-    activities = Activity.query.all()
+    activities = Activity.query.order_by(Activity.date.desc()).all()
     total_expenses = 0
     result = []
     for activity in activities:
