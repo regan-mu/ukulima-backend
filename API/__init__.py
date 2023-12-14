@@ -13,7 +13,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 DATABASE_URI = os.environ.get("UKULIMA")
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"pool_pre_ping": True}
 
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI # "sqlite:///app.db"  # DATABASE_URI  #
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI  # "sqlite:///app.db"  # DATABASE_URI  #
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
